@@ -222,7 +222,31 @@ it then sends a response to this registration challenge:
 <details>
 
 ```json
-{"username":"orpheus","response":{"id":"bzd33H7oHzfcHmpuMpZZydIs0xs","rawId":"bzd33H7oHzfcHmpuMpZZydIs0xs","response":{"attestationObject":"o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YViYdKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvBdAAAAAPv8MAcVTk7MjAtuAgVX170AFG83d9x-6B833B5qbjKWWcnSLNMbpQECAyYgASFYICySw2RwPHI-iwTdExE7cuWqS5TD_I5y5LyPVvLFKAdWIlgg71eT5mhLXgDLp5RdjWPFimU4bZCM6apTpV5aH6n_P5E","clientDataJSON":"eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiLWk2dk5mS1FiNlk2a1hSenJ1Nk1LX1kwUXllY0IyeDd0c0FBUzNweWQ4X053NC1iWXRidjd0ZllMRjdWWjdNY041cDZ6eVI2WFNWbW5EMnM2WEY1MnciLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIiwiY3Jvc3NPcmlnaW4iOmZhbHNlfQ","transports":["hybrid","internal"],"publicKeyAlgorithm":-7,"publicKey":"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELJLDZHA8cj6LBN0TETty5apLlMP8jnLkvI9W8sUoB1bvV5PmaEteAMunlF2NY8WKZThtkIzpqlOlXlofqf8_kQ","authenticatorData":"dKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvBdAAAAAPv8MAcVTk7MjAtuAgVX170AFG83d9x-6B833B5qbjKWWcnSLNMbpQECAyYgASFYICySw2RwPHI-iwTdExE7cuWqS5TD_I5y5LyPVvLFKAdWIlgg71eT5mhLXgDLp5RdjWPFimU4bZCM6apTpV5aH6n_P5E"},"type":"public-key","clientExtensionResults":{"credProps":{"rk":true}},"authenticatorAttachment":"cross-platform"}}
+{
+  "username": "orpheus",
+  "response": {
+    "id": "bzd33H7oHzfcHmpuMpZZydIs0xs",
+    "rawId": "bzd33H7oHzfcHmpuMpZZydIs0xs",
+    "response": {
+      "attestationObject": "o2NmbXRkbm9uZWdhdHRTdG10oGhhdXRoRGF0YViYdKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvBdAAAAAPv8MAcVTk7MjAtuAgVX170AFG83d9x-6B833B5qbjKWWcnSLNMbpQECAyYgASFYICySw2RwPHI-iwTdExE7cuWqS5TD_I5y5LyPVvLFKAdWIlgg71eT5mhLXgDLp5RdjWPFimU4bZCM6apTpV5aH6n_P5E",
+      "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIiwiY2hhbGxlbmdlIjoiLWk2dk5mS1FiNlk2a1hSenJ1Nk1LX1kwUXllY0IyeDd0c0FBUzNweWQ4X053NC1iWXRidjd0ZllMRjdWWjdNY041cDZ6eVI2WFNWbW5EMnM2WEY1MnciLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIiwiY3Jvc3NPcmlnaW4iOmZhbHNlfQ",
+      "transports": [
+        "hybrid",
+        "internal"
+      ],
+      "publicKeyAlgorithm": -7,
+      "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELJLDZHA8cj6LBN0TETty5apLlMP8jnLkvI9W8sUoB1bvV5PmaEteAMunlF2NY8WKZThtkIzpqlOlXlofqf8_kQ",
+      "authenticatorData": "dKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvBdAAAAAPv8MAcVTk7MjAtuAgVX170AFG83d9x-6B833B5qbjKWWcnSLNMbpQECAyYgASFYICySw2RwPHI-iwTdExE7cuWqS5TD_I5y5LyPVvLFKAdWIlgg71eT5mhLXgDLp5RdjWPFimU4bZCM6apTpV5aH6n_P5E"
+    },
+    "type": "public-key",
+    "clientExtensionResults": {
+      "credProps": {
+        "rk": true
+      }
+    },
+    "authenticatorAttachment": "cross-platform"
+  }
+}
 ```
 </details>
 
@@ -253,9 +277,28 @@ the client will refuse to authenticate.
 </details>
 
 we respond with the following:
+
+<details>
+
 ```json
-{"username":"orpheus","response":{"id":"bzd33H7oHzfcHmpuMpZZydIs0xs","rawId":"bzd33H7oHzfcHmpuMpZZydIs0xs","response":{"authenticatorData":"dKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvAdAAAAAA","clientDataJSON":"eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiQVI5SnVoajVfZDM5Wmk2SG93RWk3V24tZHpkTGc5UXBxblNqWTNpWlY2Q2E3S0UyWlJpOHlaMU0tR1JXZ21wMHdZcXpnTHM5SXU2Z3JoaWs1VGxyaVEiLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIn0","signature":"MEUCIQD13QWDskSGYHzz77xUrEDiUUacledE7JTVYnT_xF1MaAIgeSS0WRHJ11kWtb6_7l7Y3PU2NQsGXlNG84XrSN3PN78","userHandle":"b3JwaGV1cw"},"type":"public-key","clientExtensionResults":{},"authenticatorAttachment":"platform"}}
+{
+  "username": "orpheus",
+  "response": {
+    "id": "bzd33H7oHzfcHmpuMpZZydIs0xs",
+    "rawId": "bzd33H7oHzfcHmpuMpZZydIs0xs",
+    "response": {
+      "authenticatorData": "dKbqkhPJnC90siSSsyDPQCYqlMGpUKA5fyklC2CEHvAdAAAAAA",
+      "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiQVI5SnVoajVfZDM5Wmk2SG93RWk3V24tZHpkTGc5UXBxblNqWTNpWlY2Q2E3S0UyWlJpOHlaMU0tR1JXZ21wMHdZcXpnTHM5SXU2Z3JoaWs1VGxyaVEiLCJvcmlnaW4iOiJodHRwczovL3dlYmF1dGhuLmlvIn0",
+      "signature": "MEUCIQD13QWDskSGYHzz77xUrEDiUUacledE7JTVYnT_xF1MaAIgeSS0WRHJ11kWtb6_7l7Y3PU2NQsGXlNG84XrSN3PN78",
+      "userHandle": "b3JwaGV1cw"
+    },
+    "type": "public-key",
+    "clientExtensionResults": {},
+    "authenticatorAttachment": "platform"
+  }
+}
 ```
+</details>
 
 the clientIdJson contains the challenge again. the signature 
 was signed with the private key and will be compared with the
