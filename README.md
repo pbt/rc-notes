@@ -5,8 +5,8 @@ The Recurse Center
 2024-02-08 
 
 in today's talk we will cover the basic mechanisms of passkey
-authentication and the underlying FIDO protocol. we will not cover
-how to implement passkey authentication (because it's kinda hard.)
+authentication and the underlying FIDO protocol. if time permits we might cover
+how to implement passkey authentication.
 
 ## motivation
 
@@ -95,7 +95,7 @@ between the relying party and the authenticator.
 can be done in software or in hardware (a phone or a laptop's secure enclave)
 
 ### the passkey creation process
-#### demo 0: a passkey is "just" a public/private key pair
+#### a passkey is "just" a public/private key pair
 
 we have already seen passkeys in the form of SSH keys:
 [tutorial: SSH keys on GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
