@@ -151,8 +151,8 @@ demo
 #### passkeys can only be shared through HTTPS
 this helps prevent replay attacks and phishing
 
-
-## demo 1: inspecting assertions
+## if authenticated data you wish to see, first you must solve my <s>riddles</s>cryptographic challenges three
+#### demo 1: inspecting assertions
 we will use this demo website (https://webauthn.io) 
 
 as well as a debugger (https://webauthn.passwordless.id/demos/playground.html)
